@@ -2,7 +2,7 @@
 const Header = ()=>{
     return(
         <header>
-            hello from header component
+            hello world from header component
         </header>
     )
 }
