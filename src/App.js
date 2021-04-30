@@ -1,10 +1,12 @@
+import Header from './components/header';
 
 function App() {
   return (
     <div className="App">
-      <header >
+      <Header />
+      <div >
     hello from app.js
-      </header>
+      </div>
     </div>
   );
 }
