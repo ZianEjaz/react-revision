@@ -1,12 +1,12 @@
 import Header from './components/header';
+import Footer from "./components/footer";
 
 function App() {
   return (
-    <div className="App">
+    <div style={{width : "50%", margin :'auto', textAlign : 'center', backgroundColor : 'grey', color :'white'}}>
       <Header />
-      <div >
-    hello from app.js
-      </div>
+
+      <Footer />
     </div>
   );
 }
