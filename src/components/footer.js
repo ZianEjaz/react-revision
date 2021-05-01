@@ -1,7 +1,7 @@
 const Footer = ()=>{
     return(
         <footer>
-            Hello World from footer portion
+            Hello World from footer portion.
         </footer>
     )
 }
