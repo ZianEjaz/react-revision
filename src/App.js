@@ -1,15 +1,36 @@
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+// components
 import Header from './components/header';
-import Footer from "./components/footer";
-import Search from './components/search';
+import Footer from './components/footer';
+import Home from './components/home';
+import About from './components/about';
+import Users from './components/users';
 
-function App() {
+
+export default function App() {
   return (
-    <div style={{ width: "50%", margin: 'auto', textAlign: 'center', backgroundColor: 'grey', color: 'white' }}>
+
+    <Router>
       <Header />
-      <Search />
+      <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/users">
+          <Users />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
       <Footer />
-    </div>
+    </Router>
+
   );
 }
 
-export default App;

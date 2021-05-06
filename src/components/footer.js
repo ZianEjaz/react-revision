@@ -1,7 +1,9 @@
+import React from 'react';
+
 const Footer = ()=>{
     return(
         <footer>
-            Hello World from footer portion.
+            <h1>FOOTER</h1>
         </footer>
     )
 }
