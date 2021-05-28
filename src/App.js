@@ -10,6 +10,7 @@ import Footer from './components/footer';
 import Home from './components/home';
 import About from './components/about';
 import Users from './components/users';
+import Jsontoproduct from './components/Jsontoproduct';
 
 
 export default function App() {
@@ -18,6 +19,9 @@ export default function App() {
     <Router>
       <Header />
       <Switch>
+      <Route path="/jsontoproduct">
+          <Jsontoproduct />
+        </Route>
         <Route path="/about">
           <About />
         </Route>

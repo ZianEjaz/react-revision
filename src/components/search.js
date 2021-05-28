@@ -1,17 +1,27 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 
-class Search extends Component{
+class Search extends Component {
     state = {
-        name : 'zian',
-        lastName : 'ejaz',
-        age : 25
+        keyword: 'hello',
+        wordcount : 0
     }
-    render(){
-return(
-    <div className="">
-        hello from search.js Component made by {this.state.name} {this.state.lastName} {this.state.age}
-    </div>
-)
+    inputChange = (event) => {
+        this.setState({ keyword: event.target.value })
+        this.setState({ wordcount: event.target.value.split(" ").length })
+        
+
+    }
+
+
+    render() {
+        return (
+                <div>
+                <input type="text" placeholder="Enter Something" onChange={this.inputChange}></input>
+                <h1>{this.state.wordcount}</h1>
+                <p>{this.state.keyword}</p>
+                </div>
+        )
     }
 }
+
 export default Search
