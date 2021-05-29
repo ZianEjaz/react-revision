@@ -1,24 +1,17 @@
 import React from "react";
 // components
 
-const Search=()=> {
-  const inputChange = (event) => {
-    console.log(event.target.value)
-  };
+const Search=(props)=> {
 
  
     return (
-      <div>
+
         <div>
-          <input
-            type="text"
-            placeholder="Enter Something"
-            onChange={inputChange}
-            
-          ></input>
+          <input type="text" placeholder="Enter Something" onChange={props.inputChange}></input>
+          
         </div>
         
-      </div>
+
     )
         }
 
