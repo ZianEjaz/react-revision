@@ -7,7 +7,7 @@ import ProductList from "./ProductList";
 class Jsontoproduct extends Component {
   state = {
     products: Json,
-    search : "test data"
+    filtered : []
   };
   inputChange = (event) => {
     
@@ -15,15 +15,14 @@ class Jsontoproduct extends Component {
     let filtered = this.state.products.filter((item)=>{
         return item.description.indexOf(keyword) > -1
     })
-    console.log(filtered)
+    this.setState({filtered})
   }
 
   render() {
     return (
       <div>
         <Search inputChange={this.inputChange}/>
-        {this.state.search}
-        <ProductList products={this.state.products}/>
+        <ProductList products={this.state.filtered.length === 0 ? this.state.products : this.state.filtered}/>
       </div>
     );
   }

@@ -4,9 +4,11 @@ const ProductBlock=(props)=>{
 return(
 <div className="p-6 border m-6">
                 <img
-                  className="m-auto p-7" src="https://picsum.photos/300" alt="placeholder"                ></img>
-                <p className="w-80 center mx-auto">{props.product.description} </p>
-                <p className="w-80 mx-auto text-indigo-900">Name is{props.product.name}</p>
+                  className="m-auto p-7 max-w-xs" src={props.product.image} alt="placeholder"                ></img>
+                <p className="w-80 mx-auto text-lg">{props.product.name} {props.product.sku}</p>
+                <p className="w-80 center mx-auto text-sm">{props.product.description} </p>
+                <a href={props.product.url} target='blank' className="w-80 center mx-auto text-sm">Read More </a>
+                
             
               </div>)
 
