@@ -11,6 +11,7 @@ import '../style.css';
                         <li><a href='/about'>About</a></li>
                         <li><a href='/users'>Users</a></li>
                         <li><a href='/jsontoproduct'>Json data to product block</a></li>
+                        <li><a href='/removespaces'>remove spaces</a></li>
                     </ul>
                 </nav>
                 
