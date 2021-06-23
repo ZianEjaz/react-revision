@@ -6,7 +6,7 @@ const Search=(props)=> {
  
     return (
 
-        <div>
+        <div style={{width: '80%',margin : '10px auto'}}>
           <input type="text" placeholder="Enter Something" onChange={props.inputChange}></input>
           
         </div>

@@ -16,7 +16,7 @@ class RemoveSpaces extends Component{
     }
     render(){
         return(
-            <div>
+            <div  style={{width: '80%',margin : ' 10px auto'}}>
                  <Search inputChange={this.inputChange}/>
                 <p>{this.state.filteredString}</p>
             </div>
