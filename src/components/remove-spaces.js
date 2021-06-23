@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 
-import Search from './search';
 
 class RemoveSpaces extends Component{
     state={
-        filteredString : 'ffffff'
+        filteredString : 'Enter data to remove spaces'
     }
     inputChange =  (event) => {
         let string = event.target.value;
@@ -14,11 +13,23 @@ class RemoveSpaces extends Component{
         )
 
     }
+    //copy code to clipboard
+    copyCodeToClipboard = () => {
+    const el = this.textArea
+    el.select()
+    document.execCommand("copy")
+    this.setState({filteredString : ''})
+  }
     render(){
         return(
             <div  style={{width: '80%',margin : ' 10px auto'}}>
-                 <Search inputChange={this.inputChange}/>
-                <p>{this.state.filteredString}</p>
+                <textarea onChange={this.inputChange}
+            ref={(textarea) => this.textArea = textarea}
+            value={this.state.filteredString}
+          />
+                <button onClick={() => this.copyCodeToClipboard()}>
+            Copy to Clipboard
+          </button>
             </div>
         )
     }
