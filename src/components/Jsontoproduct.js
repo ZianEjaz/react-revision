@@ -3,6 +3,7 @@ import Search from "./search";
 import Json from "../json/reviews.json";
 // components
 import ProductList from "./ProductList";
+import DemoCarousel from "./corsoul";
 
 class Jsontoproduct extends Component {
   state = {
@@ -21,6 +22,7 @@ class Jsontoproduct extends Component {
   render() {
     return (
       <div>
+        <DemoCarousel />
         <Search inputChange={this.inputChange}/>
         <ProductList products={this.state.filtered.length === 0 ? this.state.products : this.state.filtered}/>
       </div>
