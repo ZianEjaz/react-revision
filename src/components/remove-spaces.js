@@ -31,6 +31,7 @@ class RemoveSpaces extends Component {
           Click To Copy to Clipboard Spaces Removed And Clear Text Box 
         </button>
         </div>
+        <p>total Numnber or Chracters : {this.state.filteredString.length} </p>
       </div>
     );
   }

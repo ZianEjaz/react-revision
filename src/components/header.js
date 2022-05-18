@@ -4,26 +4,26 @@ import "../style.css";
 const Header = () => {
   return (
     <header className="w-full">
-      <nav className="bg-gray-700 text-center md:flex">
-        <div className="w-full md:w-3/12">
-          <h1 className='text-2xl text-white'>logo</h1>
-        </div>
-        <div className="text-white p-2 w-full md:w-9/12 ">
-        <ul className=" inline-flex w-full justify-center md:justify-end">
-          <li className="p-2">
+      <nav className="bg-gray-700 text-center">
+        <div className="text-white p-2 w-full">
+        <ul className="w-full justify-center flex flex-wrap">
+          <li className="p-2 border rounded m-2">
             <a href="/">Home</a>
           </li>
-          <li className="p-2 ">
-            <a href="/about">About</a>
+          <li className="p-2 border rounded m-2">
+            <a href="/tailwind-components">Tailwind Components</a>
           </li>
-          <li className="p-2 ">
+          <li className="p-2 border rounded m-2">
             <a href="/users">Users</a>
           </li>
-          <li className="p-2 ">
+          <li className="p-2 border rounded m-2">
             <a href="/jsontoproduct">Json to block</a>
           </li>
-          <li className="p-2 ">
+          <li className="p-2 border rounded m-2">
             <a href="/removespaces">remove spaces</a>
+          </li>
+          <li className="p-2 border rounded m-2">
+            <a href="/addkeyword">Add Keyword</a>
           </li>
         </ul>
         </div>
