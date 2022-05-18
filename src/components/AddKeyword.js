@@ -3,15 +3,17 @@ import React, { Component } from 'react'
 export class AddKeyword extends Component {
   state = {
     keywordCounter : 0,
-    value : ""
+    value : "",
+    aray : []
   }
 
   addKeyword = (event)=>{
-    
+   
     if(event.charCode === 13){
 this.setState({
-      value : " "
+
     })
+    this.state.aray.push(event.target.value)
     console.log(event.target.value)
     }
     
@@ -22,9 +24,9 @@ this.setState({
     
     return (
       <div className='text-center p-5'>
-        <input type="text" className="border shadow p-3 " placeholder='Add a keyword to add' onKeyPress={this.addKeyword} value={this.state.value}/>
-        <p>{0} / 24</p>
-{this.state.value}
+        <input type="text" className="border shadow p-3 " placeholder='Add a keyword to add' onKeyPress={this.addKeyword} disabled={this.state.aray.length >= 24}/>
+        <p className={`text-${this.state.aray.length >= 24 ? "red-600" : "black"}`}>{this.state.aray.length} / 24</p>
+{console.log( + 1)}
       </div>
     )
   }
